@@ -48,7 +48,8 @@ app.add_middleware(
         "http://localhost:5173",        # Vite dev server
         "http://localhost:8001",        # Backend itself
         "http://localhost:8000"
-        "https://your-app-name.onrender.com",
+        "https://taxingsolutions-backend.onrender.com",  # Your Render URL
+        "https://*.onrender.com",
         "https://firebrick-salmon-317086.hostingersite.com"],
     allow_credentials=True,
     allow_methods=["*"],
