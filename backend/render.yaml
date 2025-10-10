@@ -1,11 +1,12 @@
 services:
   - type: web
-    name: fastapi-backend
+    name: taxing-solutions-backend
     env: python
     plan: free
-    branch: main
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: SECRET_KEY
-        generateValue: true
+        value: your-super-secret-jwt-key-here-make-it-very-long-and-random-1234567890
+      - key: DATABASE_PATH
+        value: /opt/render/project/src/users.db
