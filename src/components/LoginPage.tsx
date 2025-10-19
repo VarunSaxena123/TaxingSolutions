@@ -63,7 +63,7 @@ export function LoginPage({ onSwitchToRegister, onBackToHome }: LoginPageProps) 
     setIsLoading(true)
     
     try {
-      const response = await fetch('http://localhost:8001/auth/login', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -314,7 +314,7 @@ export function LoginPage({ onSwitchToRegister, onBackToHome }: LoginPageProps) 
     whileTap={{ scale: 0.98 }}
     onClick={() => {
       // Handle Google login
-      window.location.href = 'http://localhost:8001/auth/google';
+      window.location.href = 'https://taxingsolutions-backend.onrender.com/auth/auth/google';
     }}
   >
     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
