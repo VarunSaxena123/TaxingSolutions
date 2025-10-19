@@ -50,7 +50,7 @@ export function SuperDashboard() {
         }
         
         // Fetch current user details
-        const response = await fetch('http://localhost:8001/users', {
+        const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/users', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -79,7 +79,7 @@ export function SuperDashboard() {
   const fetchAllFranchises = async () => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/franchises', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/franchises', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -97,7 +97,7 @@ export function SuperDashboard() {
   const fetchAllUsers = async () => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -115,7 +115,7 @@ export function SuperDashboard() {
   const fetchFranchiseUsers = async (franchiseCode) => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -141,7 +141,7 @@ export function SuperDashboard() {
     setIsExporting(true)
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/export/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/export/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -178,7 +178,7 @@ export function SuperDashboard() {
         return
       }
       
-      const response = await fetch('http://localhost:8001/admin/franchises', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/franchises', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ export function SuperDashboard() {
     
     try {
       const token = getAuthToken()
-      const response = await fetch(`http://localhost:8001/admin/franchises/${franchiseId}`, {
+      const response = await fetch(`https://taxingsolutions-backend.onrender.com/auth/admin/franchises/${franchiseId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
