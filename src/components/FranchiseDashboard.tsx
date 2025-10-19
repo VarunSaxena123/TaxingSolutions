@@ -47,7 +47,7 @@ export function FranchiseDashboard() {
         }
         
         // Fetch current user details
-        const response = await fetch('http://localhost:8001/users/me', {
+        const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/users/me', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -78,7 +78,7 @@ export function FranchiseDashboard() {
   const fetchFranchiseDetails = async (franchiseCode) => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/franchises', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/franchises', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -102,7 +102,7 @@ export function FranchiseDashboard() {
   const fetchFranchiseUsers = async (franchiseCode) => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -124,7 +124,7 @@ export function FranchiseDashboard() {
     setIsExporting(true)
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/export/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/export/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -161,7 +161,7 @@ export function FranchiseDashboard() {
         return
       }
 
-      const response = await fetch(`http://localhost:8001/users/${user.id}`, {
+      const response = await fetch(`https://taxingsolutions-backend.onrender.com/auth/users/${user.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
