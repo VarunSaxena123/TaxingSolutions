@@ -1,4 +1,3 @@
-// components/SuperDashboard.jsx - Updated with franchise creation
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
