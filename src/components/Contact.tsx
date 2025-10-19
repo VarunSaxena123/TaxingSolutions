@@ -18,7 +18,7 @@ export function Contact() {
     
     try {
       // Call your FastAPI backend
-      const response = await fetch('http://localhost:8001/contact', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
