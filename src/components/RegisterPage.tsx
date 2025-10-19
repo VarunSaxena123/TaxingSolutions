@@ -104,7 +104,7 @@ export function RegisterPage({ onSwitchToLogin, onBackToHome }: RegisterPageProp
     
     try {
       // Call your FastAPI backend
-      const response = await fetch('http://localhost:8001/auth/register', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export function RegisterPage({ onSwitchToLogin, onBackToHome }: RegisterPageProp
         // Handle newsletter subscription if selected
         if (formData.subscribeNewsletter) {
           try {
-            await fetch('http://localhost:8001/newsletter/subscribe', {
+            await fetch('https://taxingsolutions-backend.onrender.com/auth/newsletter/subscribe', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
