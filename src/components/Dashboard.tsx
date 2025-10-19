@@ -49,7 +49,7 @@ export function Dashboard() {
         }
         
         // Fetch current user details
-        const response = await fetch('http://localhost:8001/users/me', {
+        const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/users/me', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -82,7 +82,7 @@ export function Dashboard() {
   const fetchAllUsers = async () => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -108,7 +108,7 @@ export function Dashboard() {
   const fetchFranchiseUsers = async (franchiseCode) => {
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -130,7 +130,7 @@ export function Dashboard() {
     setIsExporting(true)
     try {
       const token = getAuthToken()
-      const response = await fetch('http://localhost:8001/admin/export/users', {
+      const response = await fetch('https://taxingsolutions-backend.onrender.com/auth/admin/export/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -167,7 +167,7 @@ export function Dashboard() {
         return
       }
 
-      const response = await fetch(`http://localhost:8001/users/${user.id}`, {
+      const response = await fetch(`https://taxingsolutions-backend.onrender.com/auth/users/${user.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -224,7 +224,7 @@ export function Dashboard() {
         return
       }
 
-      const response = await fetch(`http://localhost:8001/admin/users/${userId}/role`, {
+      const response = await fetch(`https://taxingsolutions-backend.onrender.com/auth/admin/users/${userId}/role`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
